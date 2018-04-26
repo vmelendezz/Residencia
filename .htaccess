@@ -1,0 +1,11 @@
+Options +FollowSymlinks
+RewriteEngine On
+
+RewriteBase /
+
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteCond %{SCRIPT_FILENAME} !-f
+
+RewriteRule ^([a-zA-Z\-\_0-9\sáéíóú]*)$ index.php?page=$1 [L]
+
+Options -Indexes
