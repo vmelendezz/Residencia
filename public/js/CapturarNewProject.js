@@ -51,6 +51,10 @@
 			return post;
 		}, 
 
+		mensajesError : function(errores){
+
+		},
+
 		sendData : function (post){
 			$.ajax({
 				data: post,
@@ -59,6 +63,12 @@
 				url: "/controller/controllerSolicitudApoyo.php",
 				success: function(response){
 					console.log(response);
+					if (response.validado == 1) {
+						//guardar información y pasar al siguiente formulario
+					}else{
+						//mandar mensajes de error
+						this.mensajesError(response.respuesta);
+					}
 				},
 
 				error: function(jqxhr, textStatus, errorMessage){
@@ -113,7 +123,7 @@
 			$.ajax({
 				data: post,
 				type: "POST",
-				dataType:"json",
+				dataType:"text",
 				url: "/controller/controllerSolicitudApoyo.php",
 				success: function(response){
 					console.log(response.data);

@@ -11,7 +11,7 @@
 
 	if(isset($_POST["action"]) && $_POST["action"] == "validarModProject"){
 		$validar = validateModProject();
-		print('{"respuesta" : '.$validar.', "data": '.json_encode($_POST).', "validado" : '.$validado.'}');
+		print('{"respuesta" : '.$validar.', "data": '.json_encode($_POST).'}');
 	}
 
 	function validateInfoGeneral(){
@@ -79,14 +79,11 @@
 	}
 
 	function validateModProject(){
-		global $validado;
 		$errores = '[';
 
 		$errores .= '{"Raul": true}';
 
 		$errores .= ']';
-
-		$validado = false;
 
 		return $errores;
 	}

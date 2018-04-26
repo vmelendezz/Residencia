@@ -25,3 +25,8 @@
 			<div class="tab-pane fade" id="Concentrado" role="tabpanel" aria-labelledby="pills-profile-tab"></div>
 		</div>
 	</div>
+	<div class="alert alert-danger" role="alert">
+	  <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+	  <span class="sr-only">Error:</span>
+	  Enter a valid email address
+	</div>

@@ -1,0 +1,12 @@
+.tableTitle{
+	text-align: center;
+	font-weight: bold;
+	color: white;
+	background-color: #393c3e;
+}
+.tableTitle.num1{
+	font-size: 25px;
+}
+.tableTitle.num2{
+	font-size: 20px;
+}

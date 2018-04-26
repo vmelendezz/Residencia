@@ -38,7 +38,7 @@
  												'./public/js/forms/ProgramaActividades.html'
  											);
  				$this->infoPage['footer'] = array(
- 												'./public/js/CapturarNewProject.js?ver=0.0.2'
+ 												'./public/js/CapturarNewProject.js?ver=0.0.0'
  											);
  				return $this->infoPage;
  			case 'Protocolo':
