@@ -92,6 +92,7 @@
 		initialize : function() {
 			this.showForm ();
 		},
+		
 		render : function () {
 			this.$form = this.$('#frmModProject');
 		},
