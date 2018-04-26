@@ -1,5 +1,6 @@
 (function(){
 
+	var html;
 
 //Se crea un objeto que hereda de Backbone
 	var InfoGeneral = Backbone.View.extend({
@@ -52,10 +53,23 @@
 		}, 
 
 		mensajesError : function(errores){
+			console.log(errores);
+			html.contentErrors.show();
 
+			for (var i =0; i <= errores.length; i++) {
+				
+			}
+
+			html.errores.html('errores');
+
+			setTimeout(function(){
+				html.contentErrors.hide();
+			},
+			10000);
 		},
 
 		sendData : function (post){
+			var contexto = this;
 			$.ajax({
 				data: post,
 				type: "POST",
@@ -67,7 +81,7 @@
 						//guardar información y pasar al siguiente formulario
 					}else{
 						//mandar mensajes de error
-						this.mensajesError(response.respuesta);
+						contexto.mensajesError(response.respuesta);
 					}
 				},
 
@@ -92,7 +106,7 @@
 		initialize : function() {
 			this.showForm ();
 		},
-		
+
 		render : function () {
 			this.$form = this.$('#frmModProject');
 		},
@@ -198,6 +212,12 @@
 	
 	//metodo jQuery que se ejecuta cuando se carga por completo el documento
 	$(document).ready(function(){
+
+		html = {
+			contentErrors: $('.alert-danger'),
+			errores : $('#erroresForm')
+		};
+
 		//se crea una instancia(copia) del objeto infoGeneral
 		var objInfoGeneral = new InfoGeneral ();
 		objInfoGeneral.render();
