@@ -17,16 +17,20 @@
 			<li class="nav-item">
 				<a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#Concentrado" role="tab" aria-controls="pills-profile" aria-selected="false">Programa de actividades</a>
 			</li>
+			<li class="nav-item">
+				<a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#PlanDeTrabajo" role="tab" aria-controls="pills-profile" aria-selected="false">Programa de actividades</a>
+			</li>
 		</ul>
 		<div class="tab-content" id="pills-tabContent">
 			<div class="tab-pane fade show active" id="info-general" role="tabpanel" aria-labelledby="pills-home-tab"></div>
 			<div class="tab-pane fade" id="Modalidad-del-proyecto" role="tabpanel" aria-labelledby="pills-profile-tab"></div>
 			<div class="tab-pane fade show" id="ColaboradoresP" role="tabpanel" aria-labelledby="pills-home-tab"></div>
 			<div class="tab-pane fade" id="Concentrado" role="tabpanel" aria-labelledby="pills-profile-tab"></div>
+			<div class="tab-pane fade" id="PlanDeTrabajo" role="tabpanel" aria-labelledby="pills-profile-tab"></div>
 		</div>
 	</div>
-	<div class="alert alert-danger" role="alert">
+	<div class="alert alert-danger" role="alert" style="display: none;">
 	  <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
 	  <span class="sr-only">Error:</span>
-	  Enter a valid email address
+	  <span id="erroresForm"></span>
 	</div>
