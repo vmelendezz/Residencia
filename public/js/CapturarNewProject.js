@@ -56,14 +56,23 @@
 			console.log(errores);
 			html.contentErrors.show();
 
+			html.errores.append('Errores <br>');
 			for (var i =0; i <= errores.length; i++) {
-				
+				for(var key in errores[i]) {
+					if( errores[i][key] == false ){
+						if( key== 'correo' )
+							html.errores.append('- Correo <br>');
+						if(  key == 'SNI' )
+							html.errores.append('- SNI <br>');
+						if(  key == 'tipoInvestigacion' )
+							html.errores.append('- Tipo de investigación <br>');
+					}
+				}
 			}
-
-			html.errores.html('errores');
 
 			setTimeout(function(){
 				html.contentErrors.hide();
+				html.errores.html('');
 			},
 			10000);
 		},
@@ -209,6 +218,35 @@
 		},
 	})
 
+	var planDeTrabajo = Backbone.View.extend({
+
+		el: '#PlanDeTrabajo',
+		template: _.template($('#tmp-planDeTrabajo').html()),
+		validada: false,
+		next: false,
+		events: {
+			'submit #formPlanDeTrabajo': 'nextform',
+		},
+		post: '',
+
+		initialize : function(){
+			this.showForm();
+		},
+
+		render : function () {
+			this.$form = this.$('#formPlanDeTrabajo');
+		},
+
+		showForm : function () {
+			this.$el.html(this.template());
+		},
+		nextform : function (event) {
+			event.preventDefault();
+			this.post = this.validarForm(event);
+			this.sendData( this.post );
+		},
+	})
+
 	
 	//metodo jQuery que se ejecuta cuando se carga por completo el documento
 	$(document).ready(function(){
@@ -230,6 +268,9 @@
 
 		var objProgActividades = new programaActividades();
 		objProgActividades.render();
+
+		var objPlanDeTrabajo = new planDeTrabajo();
+		objPlanDeTrabajo.render();
 	});
 
 })();
