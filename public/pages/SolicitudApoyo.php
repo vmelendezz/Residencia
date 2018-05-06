@@ -72,5 +72,4 @@
 	  <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
 	  <span class="sr-only">Error:</span>
 	  <span id="erroresForm"></span>
->>>>>>> bfd732d8726367ba230f2f2e329e41b8b77222a1
 	</div>

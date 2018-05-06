@@ -225,5 +225,4 @@
 		$errores .= ']';
 		return $errores;
 	}
->>>>>>> bfd732d8726367ba230f2f2e329e41b8b77222a1
  ?>

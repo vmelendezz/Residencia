@@ -594,6 +594,4 @@
 		var objPlanDeTrabajo = new planDeTrabajo();
 		objPlanDeTrabajo.render();
 	});
-
->>>>>>> bfd732d8726367ba230f2f2e329e41b8b77222a1
 })();
