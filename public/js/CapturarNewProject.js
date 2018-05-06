@@ -319,7 +319,6 @@
 		objPlanDeTrabajo.render();
 	});
 
-=======
 (function(){
 
 	var html;

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 <?php 
 	//echo '{"respuesta": "'.$_POST["action"].'"}';
 	
