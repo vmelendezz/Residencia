@@ -89,49 +89,6 @@
 	}
 
 
-	echo json_encode( 
-		Array( 
-			"validado" => 1, 
-			"title" => "Todos los usuarios", 
-			"usuarios" => 
-				Array( 
-					Array(
-					"nombre" => "Mario",
-					"edad" => 22,
-					"peso" => 60,
-					"telefonos" => Array (123456, 1234567, 234567, 12345678),
-					"mascotas" => Array("perro", "pajaro", "conejo")
-					),
-					Array(
-					"nombre" => "Valeria",
-					"edad" => 22,
-					"peso" => 60,
-					"telefonos" => Array (123456, 1234567, 234567, 12345678),
-					"mascotas" => Array("perro", "pajaro", "conejo")
-					),
-					Array(
-					"nombre" => "refri",
-					"edad" => 22,
-					"peso" => 60,
-					"telefonos" => Array (123456, 1234567, 234567, 12345678),
-					"mascotas" => Array("perro", "pajaro", "conejo")
-					),
-					Array(
-					"nombre" => "Joss",
-					"edad" => 22,
-					"peso" => 60,
-					"telefonos" => Array (123456, 1234567, 234567, 12345678),
-					"mascotas" => Array("perro", "pajaro", "conejo")
-					),
-					Array(
-					"nombre" => "vannesa",
-					"edad" => 22,
-					"peso" => 60,
-					"telefonos" => Array (123456, 1234567, 234567, 12345678),
-					"mascotas" => Array("perro", "pajaro", "conejo")
-					),
-				)
-		) 
-	);
+	
 
  ?>
