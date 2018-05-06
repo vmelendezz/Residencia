@@ -1,53 +1,333 @@
 <script id="tmp-planDeTrabajo" type="text/template">
-	<form id="formPlanDeTrabajo"></form>
+	<form id="formPlanDeTrabajo">
 		<div class="col-12 col-sm-12 col-md-12">
 			<h3 class=" col-12 col-sm-12 col-md-12" style="margin-top: 30px;" align="center">Plan de trabajo</h3>
-				<table class="table table-bordered">
-					<thead class="thead-dark">
+		<table class="table table-bordered">
+			<thead class="thead-dark">
+				<tr>
+					<th scope="col" colspan="8" style="text-align: center;">Actividades de docencia</th>
+				</tr>
+				<tr>
+					<th scope="col">Nombre de asignatura</th>
+					<th scope="col">No. de estudiantes</th>
+					<th scope="col" colspan="2" style="text-align: center;">Nivel</th>
+					<th scope="col" colspan="3" style="text-align: center;">Horas a la semana</th>
+					<th scope="col">Total horas semana</th>
+				</tr>
+				<tr>
+					<th></th>
+					<th></th>
+					<th>Licenciatura</th>
+					<th>Maestría</th>
+					<th>Teórica</th>
+					<th>Teórica/práctica</th>
+					<th>Práctica</th>
+					<th></th>
+				</tr>
+			</thead>
+			<body>
+				<tr>
+					<td>
+						<input type="text" class="form-control" name="txtPTNomAsig">
+					</td>
+					<td>
+						<input class="form-control" type="number" name="numberPTNoEstudi">
+					</td>
+					<td style="margin: center;">
+						<div class="form-check">
+							<input type="checkbox" name="checkLic" value="0">
+						</div>
+					</td>
+					<td style="margin: center;">
+						<div class="form-check">
+							<input type="checkbox" name="checkMaes" value="1">
+						</div>
+					</td>
+					<td>
+						<input class="form-control" type="number" name="numberPTTeorica">
+					</td>
+					<td>
+						<input class="form-control" type="number" name="numberPTTeoPrac">
+					</td>
+					<td>
+						<input class="form-control" type="number" name="numberPTPractica">
+					</td>
+					<td>
+						<input type="text" class="form-control" name="txtPTTotal">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="text" class="form-control" name="txtPTNomAsig">
+					</td>
+					<td>
+						<input class="form-control" type="number" name="numberPTNoEstudi">
+					</td>
+					<td style="margin: center;">
+						<div class="form-check">
+							<input type="checkbox" name="checkLic" value="0">
+						</div>
+					</td>
+					<td style="margin: center;">
+						<div class="form-check">
+							<input type="checkbox" name="checkMaes" value="1">
+						</div>
+					</td>
+					<td>
+						<input class="form-control" type="number" name="numberPTTeorica">
+					</td>
+					<td>
+						<input class="form-control" type="number" name="numberPTTeoPrac">
+					</td>
+					<td>
+						<input class="form-control" type="number" name="numberPTPractica">
+					</td>
+					<td>
+						<input type="text" class="form-control" name="txtPTTotal">
+					</td>
+				</tr>
+			</body>
+		</table>
+		<table class="table table-bordered">
+			<thead class="thead-dark">
+				<tr>
+					<th scope="col" colspan="8" style="text-align: center;">Actividades de tutoría</th>
+				</tr>
+				<tr>
+					<th scope="col">Nombre del estudiente</th>
+					<th scope="col">Tipo de tutoría</th>
+					<th scope="col" colspan="2" style="text-align: center;">Nivel</th>
+					<th scope="col" colspan="3" style="text-align: center;">Horas a la semana</th>
+					<th scope="col">Total horas semana</th>
+				</tr>
+				<tr>
+					<th></th>
+					<th></th>
+					<th>Licenciatura</th>
+					<th>Maestría</th>
+					<th>Teórica</th>
+					<th>Teórica/práctica</th>
+					<th>Práctica</th>
+					<th></th>
+				</tr>
+			</thead>
+			<body>
+				<tr>
+					<td>
+						<input type="text" class="form-control" name="txtPTNomAsig">
+					</td>
+					<td>
+						<input class="form-control" type="number" name="numberPTNoEstudi">
+					</td>
+					<td style="margin: center;">
+						<div class="form-check">
+							<input type="checkbox" name="checkLic" value="0">
+						</div>
+					</td>
+					<td style="margin: center;">
+						<div class="form-check">
+							<input type="checkbox" name="checkMaes" value="1">
+						</div>
+					</td>
+					<td>
+						<input class="form-control" type="number" name="numberPTTeorica">
+					</td>
+					<td>
+						<input class="form-control" type="number" name="numberPTTeoPrac">
+					</td>
+					<td>
+						<input class="form-control" type="number" name="numberPTPractica">
+					</td>
+					<td>
+						<input type="text" class="form-control" name="textPTTotalHrs">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="text" class="form-control" name="txtPTNomAsig">
+					</td>
+					<td>
+						<input class="form-control" type="number" name="numberPTNoEstudi">
+					</td>
+					<td style="margin: center;">
+						<div class="form-check">
+							<input type="checkbox" name="checkLic" value="0">
+						</div>
+					</td>
+					<td style="margin: center;">
+						<div class="form-check">
+							<input type="checkbox" name="checkMaes" value="1">
+						</div>
+					</td>
+					<td>
+						<input class="form-control" type="number" name="numberPTTeorica">
+					</td>
+					<td>
+						<input class="form-control" type="number" name="numberPTTeoPrac">
+					</td>
+					<td>
+						<input class="form-control" type="number" name="numberPTPractica">
+					</td>
+					<td>
+						<input type="text" class="form-control" name="textPTTotalHrs">
+					</td>
+				</tr>
+			</body>
+		</table>
+		<table class="table table-bordered">
+			<thead class="thead-dark">
+				<tr>
+					<th scope="col" colspan="8" style="text-align: center;">Actividades de dirección de tesis</th>
+				</tr>
+				<tr>
+					<th scope="col">Nombre del estudiante</th>
+					<th scope="col">Nombre de la tesis</th>
+					<th scope="col" colspan="2" style="text-align: center;">Nivel</th>
+					<th scope="col">Fecha de termino</th>
+					<th scope="col">Total de horas a la semana</th>
+				</tr>
+				<tr>
+					<th></th>
+					<th></th>
+					<th>Licenciatura</th>
+					<th>Maestría</th>
+					<th></th>
+					<th></th>
+				</tr>
+			</thead>
+			<body>
+				<tr>
+					<td>
+						<input type="text" class="form-control" name="txtPTNomAsig">
+					</td>
+					<td>
+						<input class="form-control" type="number" name="numberPTNoEstudi">
+					</td>
+					<td style="margin: center;">
+						<div class="form-check">
+							<input type="checkbox" name="checkLic" value="0">
+						</div>
+					</td>
+					<td style="margin: center;">
+						<div class="form-check">
+							<input type="checkbox" name="checkMaes" value="1">
+						</div>
+					</td>
+					<td><input type="date" class="form-control" name="datePTFechaTerm"></td>
+					<td><input type="text" class="form-control" name="textPTTotalHrs"></td>
+				</tr>
+				<tr>
+					<td>
+						<input type="text" class="form-control" name="txtPTNomAsig">
+					</td>
+					<td>
+						<input class="form-control" type="number" name="numberPTNoEstudi">
+					</td>
+					<td style="margin: center;">
+						<div class="form-check">
+							<input type="checkbox" name="checkLic" value="0">
+						</div>
+					</td>
+					<td style="margin: center;">
+						<div class="form-check">
+							<input type="checkbox" name="checkMaes" value="1">
+						</div>
+					</td>
+					<th>
+						<input type="date" class="form-control" name="datePTFechaTerm">
+					</th>
+					<th>
+						<input type="text" class="form-control" name="textPTTotalHrs">
+					</th>
+				</tr>
+			</body>
+		</table>
+			<table class="table table-bordered">
+			<thead class="thead-dark">
+				<tr>
+					<th scope="col" colspan="8" style="text-align: center;">Actividades de investigación</th>
+				</tr>
+				<tr>
+					<th scope="col">Nombre del proyecto</th>
+					<th scope="col">Función en el proyecto</th>
+					<th scope="col">Productos esperados del proyecto</th>
+					<th scope="col">Total de horas a la semana</th>
+				</tr>
+			</thead>
+			<body>
+				<tr>
+					<th>
+						<input type="text" class="form-control" name="textPTTotalHrs">
+					</th>
+					<th>
+						<input type="text" class="form-control" name="textPTTotalHrs">
+					</th>
+					<th>
+						<input type="text" class="form-control" name="textPTTotalHrs">
+					</th>
+					<th>
+						<input type="text" class="form-control" name="textPTTotalHrs">
+					</th>
+				</tr>
+					<tr>
+					<th>
+						<input type="text" class="form-control" name="textPTTotalHrs">
+					</th>
+					<th>
+						<input type="text" class="form-control" name="textPTTotalHrs">
+					</th>
+					<th>
+						<input type="text" class="form-control" name="textPTTotalHrs">
+					</th>
+					<th>
+						<input type="text" class="form-control" name="textPTTotalHrs">
+					</th>
+				</tr>
+			</body>
+		</table>
+		</table>
+			<table class="table table-bordered">
+			<thead class="thead-dark">
+				<tr>
+					<th scope="col" colspan="8" style="text-align: center;">Actividades de gestión académica</th>
+				</tr>
+				<tr>
+					<th scope="col">Función</th>
+					<th scope="col">Descripción de la actividad</th>
+					<th scope="col">Producto esperado</th>
+					<th scope="col">Total horas semana</th>
+				</tr>
+			</thead>
+			<body>
 						<tr>
-							<th scope="col" colspan="8" style="text-align: center;">Actividades de docencia</th>
-						</tr>
-					</thead>
-					<body>
-						<tr>
-							<th scope="col">Nombre de asignatura</th>
-							<th scope="col">No. de estudiantes</th>
-							<th scope="col" colspan="2" style="text-align: center;">Nivel</th>
-							<th scope="col" colspan="3" style="text-align: center;">Horas a la semana</th>
-							<th scope="col">Total horas semana</th>
-						</tr>
-						<tr>
-							<th></th>
-							<th></th>
-							<th>Licenciatura</th>
-							<th>Maestría</th>
-							<th>Teórica</th>
-							<th>Teórica/práctica</th>
-							<th>Práctica</th>
-							<th></th>
-						</tr>
-						<tr>
-							<th></th>
-							<th></th>
-							<th></th>
-							<th></th>
-							<th></th>
-							<th></th>
-							<th></th>
-							<th></th>
-						</tr>
-						<tr>
-							<th></th>
-							<th></th>
-							<th></th>
-							<th></th>
-							<th></th>
-							<th></th>
-							<th></th>
-							<th></th>
-						</tr>
-					</body>
-				</table>
-		</div>
-	
+					<th>
+						<input type="text" class="form-control" name="textPTTotalHrs">
+					</th>
+					<th>
+						<input type="text" class="form-control" name="textPTTotalHrs">
+					</th>
+					<th>
+						<input type="text" class="form-control" name="textPTTotalHrs">
+					</th>
+					<th>
+						<input type="text" class="form-control" name="textPTTotalHrs">
+					</th>
+				</tr>
+					<tr>
+					<th>
+						<input type="text" class="form-control" name="textPTTotalHrs">
+					</th>
+					<th>
+						<input type="text" class="form-control" name="textPTTotalHrs">
+					</th>
+					<th>
+						<input type="text" class="form-control" name="textPTTotalHrs">
+					</th>
+					<th>
+						<input type="text" class="form-control" name="textPTTotalHrs">
+					</th>
+				</tr>
+			</body>
+		</table>
+	</form>	
 </script>

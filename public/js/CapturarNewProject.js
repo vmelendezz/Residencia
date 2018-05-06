@@ -1,6 +1,50 @@
 (function(){
 
+	var aggregator = _.extend({}, Backbone.Events);
+
+	var modelForm = Backbone.Model.extend({
+	    defaults: {
+	        'title': '',
+	        'inputs': {},
+	    },
+	    //2. recibe cada una de las filas de los datos recibidos del servidor (modelos por separado)
+	    //se agrega cada modelo a la colección y desencadena en evento (((((((((add))))))))
+	    parse: function(response){
+	        return response;
+	    },
+	});
+
+	/* 
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	|                                       COLLECTIONS                                       |
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+	*/
+
+	/*
+	* Collection of tables definitions
+	*///1. coleccion de modelos: recibe la respuesta del servidor, retorna un arreglo que contiene
+	//los modelos que se agregaran en el siguiente paso
+	var FormsCollections = Backbone.Collection.extend({
+	    model: modelForm,
+	    url: '/controller/controllerSolicitudApoyo.php',
+	    parse: function(response){
+	        if(response.validado == 1){
+	            return response.usuarios;
+	        } else {
+	            console.log("No se encontro información del formulario");
+	        }
+	    }
+	});
+
+	var collectionForms = new FormsCollections();
+
 	var html;
+
+	/* 
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	|                                       View                                       |
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+	*/
 
 //Se crea un objeto que hereda de Backbone
 	var InfoGeneral = Backbone.View.extend({
@@ -23,7 +67,13 @@
 
 		//guarda en cache el formulario de la clase actual
 		render : function () {
+			//3. escucha por medio de add y ejecuta la función addElements cada vez que se agrega un modelo a la colección
+			this.listenTo( this.collection, 'add', this.addElements );
+
+			this.collection.fetch();
+
 			this.$form = this.$('#frmInfoGeneral');
+			return this;
 		},
 
 		showForm : function() {
@@ -51,30 +101,25 @@
 			}
 			return post;
 		}, 
-
 		mensajesError : function(errores){
 			console.log(errores);
 			html.contentErrors.show();
-
 			html.errores.append('Errores <br>');
-			for (var i =0; i <= errores.length; i++) {
-				for(var key in errores[i]) {
-					if( errores[i][key] == false ){
-						if( key== 'correo' )
-							html.errores.append('- Correo <br>');
-						if(  key == 'SNI' )
-							html.errores.append('- SNI <br>');
-						if(  key == 'tipoInvestigacion' )
-							html.errores.append('- Tipo de investigación <br>');
-					}
+			for (var i = 0; i < errores.length; i++) {
+
+				if( errores[i].validado == false ){
+					html.errores.append('- '+errores[i].error+' <br>');
 				}
 			}
-
 			setTimeout(function(){
 				html.contentErrors.hide();
 				html.errores.html('');
 			},
 			10000);
+		},
+		//4. recibe cada uno de los modelos guardados en la colección
+		addElements : function( model ){
+			console.log(collectionForms);
 		},
 
 		sendData : function (post){
@@ -101,7 +146,6 @@
 		}
 		
 	})
-
 	var modProject = Backbone.View.extend({
 
 		el: '#Modalidad-del-proyecto',
@@ -257,7 +301,8 @@
 		};
 
 		//se crea una instancia(copia) del objeto infoGeneral
-		var objInfoGeneral = new InfoGeneral ();
+		var objInfoGeneral = new InfoGeneral ({ collection: collectionForms, });
+		objInfoGeneral.eventos = aggregator;
 		objInfoGeneral.render();
 
 		var objModProject = new modProject();

@@ -1,3 +1,4 @@
+<!-- head.php 7.4.1 -->
 <!DOCTYPE html>
 	<html>
 		<head>
@@ -8,3 +9,4 @@
 			<title><?php echo $this->infoFile['title']; ?></title>
 		</head>
 		<body>
+<!-- head.php -->
