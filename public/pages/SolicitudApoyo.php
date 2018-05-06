@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 <!-- contenido de la pagina 7.5.1 pero solo las secciones sin el contenido de los formularios-->
 	<div class="container">
 

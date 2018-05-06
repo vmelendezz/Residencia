@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 (function(){
 
 	var aggregator = _.extend({}, Backbone.Events);
