@@ -2,7 +2,7 @@
 <!-- contenido de la pagina 7.5.1 pero solo las secciones sin el contenido de los formularios-->
 	<div class="container">
 
-		<h1 class="title-1">FORMATO CONCENTRADOR DE SOLICITUD DE APOYO (CI-01/2018)</h1>
+		<h1 class="title-1" style="margin-top: 30px;" align="center">FORMATO CONCENTRADOR DE SOLICITUD DE APOYO (CI-01/2018)</h1>
 		<h5>Antes de proporcionar la información solicitada, lea cuidadosamente cada uno de los rubros que contiene la presente solicitud, ya que en caso de presentarse incompleta, será rechazada.</h3>
 		<!-- es el contenido visual de la pagina con estilos de bootstrap, el cual secciona el contenido del formulario -->
 		<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">

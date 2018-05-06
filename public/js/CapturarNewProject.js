@@ -29,11 +29,12 @@
 	    model: modelForm,
 	    url: '/controller/controllerSolicitudApoyo.php',
 	    parse: function(response){
-	        if(response.validado == 1){
+	    	console.log(response);
+	        /*if(response.validado == 1){
 	            return response.usuarios;
 	        } else {
 	            console.log("No se encontro información del formulario");
-	        }
+	        }*/
 	    }
 	});
 
@@ -71,6 +72,7 @@
 			//3. escucha por medio de add y ejecuta la función addElements cada vez que se agrega un modelo a la colección
 			this.listenTo( this.collection, 'add', this.addElements );
 
+			this.collection.url = '/controller/controllerSolicitudApoyo.php?action=getInitInfoGeneral';
 			this.collection.fetch();
 
 			this.$form = this.$('#frmInfoGeneral');
@@ -107,7 +109,6 @@
 			html.contentErrors.show();
 			html.errores.append('Errores <br>');
 			for (var i = 0; i < errores.length; i++) {
-
 				if( errores[i].validado == false ){
 					html.errores.append('- '+errores[i].error+' <br>');
 				}
