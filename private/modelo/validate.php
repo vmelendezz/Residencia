@@ -71,7 +71,7 @@ class Validate
 		}
 
 		if(isset($data["rbnTipoInvest"])){
-			if(!this->idInt( $data["rbnTipoInvest"]) ){
+			if(!$this->idInt($data["rbnTipoInvest"])){
 				$validado = 0;
 				array_push($errores, Array("validado" => false, "error" => "tipoInvestigacion"));
 			}
@@ -109,7 +109,7 @@ class Validate
 			$validado = 0;
 		}
 
-		if(!this->idInt( $data["cmbxProgramEdu"]) ){
+		if(!$this->idInt( $data["cmbxProgramEdu"]) ){
 			array_push($errores, Array("validado" => false, "error" => "cmbxProgramEdu"));
 			$validado = 0;
 		}
@@ -117,7 +117,7 @@ class Validate
 			array_push($errores, Array("validado" => true, "error" => "cmbxProgramEdu"));
 		}
 
-		if(!this->idInt( $data["cmbxLineInvest"])){
+		if(!$this->idInt( $data["cmbxLineInvest"])){
 			array_push($errores, Array("validado" => false, "error" => "cmbxLineInvest"));
 			$validado = 0;
 		}
@@ -133,7 +133,7 @@ class Validate
 			array_push($errores, Array("validado" => true, "error" => "txtNumsni"));
 		}
 
-		if(!this->idInt( $data["cmbxNameProgramEdu"])){
+		if(!$this->idInt( $data["cmbxNameProgramEdu"])){
 			array_push($errores, Array("validado" => false, "error" => "cmbxNameProgramEdu"));
 			$validado = 0;
 		}
@@ -141,7 +141,7 @@ class Validate
 			array_push($errores, Array("validado" => true, "error" => "cmbxNameProgramEdu"));
 		}
 
-		if(!this->idInt( $data["cmbxLineInvestOrTrab"])){
+		if(!$this->idInt( $data["cmbxLineInvestOrTrab"])){
 			array_push($errores, Array("validado" => false, "error" => "cmbxLineInvestOrTrab"));
 			$validado = 0;
 		}
@@ -149,7 +149,7 @@ class Validate
 			array_push($errores, Array("validado" => true, "error" => "cmbxLineInvestOrTrab"));
 		}
 
-		if (!this->idInt( $data["txtNumprodep"])) {
+		if (!$this->idInt( $data["txtNumprodep"])) {
 			array_push($errores, Array("validado" => false, "error" => "txtNumprodep"));
 			$validado = 0;
 		}
@@ -165,7 +165,7 @@ class Validate
 			$validado = 0;
 		}
 
-		if(!this->idInt( $data["cmbxNameCuerpoAc"])){
+		if(!$this->idInt( $data["cmbxNameCuerpoAc"])){
 			array_push($errores, Array("validado" => false, "error" => "cmbxNameCuerpoAc"));
 			$validado = 0;
 		}
@@ -173,7 +173,7 @@ class Validate
 			array_push($errores, Array("validado" => true, "error" => "cmbxNameCuerpoAc"));
 		}
 
-		if(!this->idInt( $data["cmbxProgramEducativo"])){
+		if(!$this->idInt( $data["cmbxProgramEducativo"])){
 			array_push($errores, Array("validado" => false, "error" => "cmbxProgramEducativo"));
 			$validado = 0;
 		}
@@ -181,7 +181,7 @@ class Validate
 			array_push($errores, Array("validado" => true, "error" => "cmbxProgramEducativo"));
 		}
 
-		if(!this->idInt( $data["cmbxLineInvest"])){
+		if(!$this->idInt( $data["cmbxLineInvest"])){
 			array_push($errores, Array("validado" => false, "error" => "cmbxLineInvest"));
 			$validado = 0;
 		}
@@ -189,7 +189,7 @@ class Validate
 			array_push($errores, Array("validado" => true, "error" => "cmbxLineInvest"));
 		}		
 
-		if (!this->fecha( $data["datefechaModProject"]) {
+		if (!$this->fecha( $data["datefechaModProject"]) ){
 			array_push($errores, Array("validado" => false, "error" => "datefechaModProject"));
 			$validado = 0;
 		}
@@ -197,7 +197,7 @@ class Validate
 			array_push($errores, Array("validado" => true, "error" => "datefechaModProject"));
 		}
 
-		if(!this->idInt( $data["txtNumber"])){
+		if(!$this->idInt( $data["txtNumber"])){
 			array_push($errores, Array("validado" => false, "error" => "txtNumber"));
 			$validado = 0;
 		}
@@ -205,7 +205,7 @@ class Validate
 			array_push($errores, Array("validado" => true, "error" => "txtNumber"));
 		}
 
-		if(!this->idInt( $data["txtHorasDes"])){
+		if(!$this->idInt( $data["txtHorasDes"])){
 			array_push($errores, Array("validado" => false, "error" => "txtHorasDes"));
 			$validado = 0;
 		}
@@ -215,5 +215,7 @@ class Validate
 
 		return '{"respuesta" : '.json_encode($errores).', "data": '.json_encode($data).', "validado" : '.$validado.' }';
 	}
+
+}
 	
 ?>
