@@ -5,7 +5,7 @@
 		require "../modelo/getInitSolicitudApoyo.php";
 		$initGeneral = new SolicitudApoyo();
 
-		echo json_encode ( $initGeneral->getInitInfoGeneral() ) ;
+		echo json_encode ( $initGeneral->getInstituciones());
 	}
 
 	if (isset($_POST["action"]) && $_POST["action"] == "validarInfoGeneral") {
