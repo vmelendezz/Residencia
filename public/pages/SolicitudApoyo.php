@@ -7,19 +7,19 @@
 		<!-- es el contenido visual de la pagina con estilos de bootstrap, el cual secciona el contenido del formulario -->
 		<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
 			<li class="nav-item">
-				<a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#info-general" role="tab" aria-controls="pills-home" aria-selected="true">Información general</a>
+				<a class="nav-link active" id="tabInfoGeneral" data-toggle="pill" href="#info-general" role="tab" aria-controls="pills-home" aria-selected="true">Información general</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#Modalidad-del-proyecto" role="tab" aria-controls="pills-profile" aria-selected="false">Modalidad del Proyecto</a>
+				<a class="nav-link" id="tabModProyecto" data-toggle="pill" href="#Modalidad-del-proyecto" role="tab" aria-controls="pills-profile" aria-selected="false">Modalidad del Proyecto</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#ColaboradoresP" role="tab" aria-controls="pills-profile" aria-selected="false">Profesores Colaboradores del proyecto</a>
+				<a class="nav-link" id="tabPofCol" data-toggle="pill" href="#ColaboradoresP" role="tab" aria-controls="pills-profile" aria-selected="false">Profesores Colaboradores del proyecto</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#Concentrado" role="tab" aria-controls="pills-profile" aria-selected="false">Programa de actividades</a>
+				<a class="nav-link" id="tabPrograma" data-toggle="pill" href="#Concentrado" role="tab" aria-controls="pills-profile" aria-selected="false">Programa de actividades</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#PlanDeTrabajo" role="tab" aria-controls="pills-profile" aria-selected="false">Plan de trabajo</a>
+				<a class="nav-link" id="tabPlanTrabajo" data-toggle="pill" href="#PlanDeTrabajo" role="tab" aria-controls="pills-profile" aria-selected="false">Plan de trabajo</a>
 			</li>
 		</ul>
 		<!-- el href de tablist debe coincidir con el id de tabContent -->
