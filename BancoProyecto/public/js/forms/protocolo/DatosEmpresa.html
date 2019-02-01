@@ -1,0 +1,68 @@
+<script id="tmp-DatosEmpresa" type="text/template">
+	<form id="frmDatosEmpresa">
+		<div class="col-12 col-md-12 col-sm-12 row">
+				1.10 Vinculación con el Sector Productivo. 
+		</div>
+		<div class="col-12 col-md-12 col-sm-12 row">
+			Especifique el nombre de la empresa y tipo de cooperación que existirá, así como la responsabilidad en los resultados del proyecto.  Anexe carta compromiso, o mencione los usuarios potenciales de los resultados de su investigación así como la vinculación que se tiene con otras instituciones y su entorno. 
+		</div>
+		<div class="col-12 col-md-12 col-sm-12" style="margin-top: 20px">
+			<div class="form-group">
+				<label for="NOMEMPRESA">Nombre de la empresa</label>
+				<input type="text" name="txtnomempresa" placeholder="Ingrese el nombre de la empresa" class="form-control" id="NOMEMPRESA" />
+			</div>
+		</div>
+		<div class="col-12 col-md-12 col-sm-12" style="margin-top: 20px">
+			<div class="form-group">
+				<label for="TIPOCOOPERACION">Tipo de cooperación</label>
+				<textarea  type="text" class="form-control" id="TIPOCOOPERACION" row="26" name="textAreaTipoCooperacion"></textarea>
+			</div>
+		</div>
+		<div class="col-12 col-md-12 col-sm-12" style="margin-top: 20px">
+			<div class="form-group">
+				<label for="RESPONSABILIDAD">Responsabilidad en los resultados del proyecto</label>
+				<textarea  type="text" class="form-control" id="RESPONSABILIDAD" row="26" name="textAreaResponsabilidad"></textarea>
+			</div>
+		</div>
+		<div class="col-12 col-md-12 col-sm-12">
+			<div class="form-group">
+				<label for="CarComprOresponsables">Anexe carta compromiso o usuarios potenciales</label>
+				<div class="col-12 col-md-12 col-sm-12 row">
+						<input type="file" class="form-control-file" id="CARTACOMPROMISO"  multiple="multiple" name="file">
+						<div id="FilesSave">
+						</div>
+				</div>
+				<div class="col-12 col-md-12 col-sm-12 row" style="margin-top: 20px">
+					<textarea  type="text" class="form-control" id="USUARIOSPOTENCIALES" row="26" name="textAreaUsuariosPotenciales" placeholder="Usuarios potenciales"></textarea>	
+				</div>
+			</div>				
+		</div>
+		<div class="col-12 col-md-12 col-sm-12 row">
+			1.11 Referencias
+		</div>
+		<div class="col-12 col-md-12 col-sm-12 row">
+				Enuncie las referencias consultadas para la descripción del estado del campo o del arte, planteamiento y desarrollo del proyecto. 
+		</div>
+		<div class="col-12 col-md-12 col-sm-12" style="margin-top: 20px">
+			<div class="form-group">
+				<label for="REFERENCIAS">Referencias</label>
+				<textarea type="text" name="referencias" class="form-control" id="REFERENCIAS" row="26"></textarea>
+			</div>
+			<div class="form-group">
+				<label for="CAMPOARTE">Descripción del estado del campo o del arte</label>
+				<textarea type="text" name="campoarte" class="form-control" id="CAMPOARTE" row="26"></textarea>
+			</div>
+			<div class="form-group">
+				<label for="PLANTEAMIENTO">Planteamiento</label>
+				<textarea type="text" name="plateamiento" class="form-control" id="PLANTEAMIENTO" row="26"></textarea>
+			</div>
+			<div class="form-group">
+				<label for="DESARROLLO">Desarrollo del proyecto</label>
+				<textarea type="text" name="desarrollo" class="form-control" id="DESARROLLO" row="26"></textarea>
+			</div>
+		</div>
+		<div class="text-right">
+			<button id="sigFormLugarInfra" type="submit" class="btn btn-primary" name="action" value="validarDatosEmpresa">Siguiente</button>
+		</div>
+	</form>
+</script>

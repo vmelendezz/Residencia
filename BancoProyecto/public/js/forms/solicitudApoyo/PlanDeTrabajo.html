@@ -1,0 +1,439 @@
+<script id="tmp-planDeTrabajo" type="text/template">
+	<form id="formPlanDeTrabajo">
+		<div class="col-12 col-sm-12 col-md-12">
+			<h3 class=" col-12 col-sm-12 col-md-12" style="margin-top: 30px;" align="center">Plan de trabajo</h3>
+		<table id="tblAddDocencia" class="table table-bordered">
+			<thead class="thead-dark">
+				<tr>
+					<th scope="col" colspan="9" style="text-align: center;">Actividades de docencia</th>
+				</tr>
+				<tr>
+					<th></th>
+					<th scope="col">Nombre de asignatura</th>
+					<th scope="col">No. de estudiantes</th>
+					<th scope="col" colspan="2" style="text-align: center;">Nivel</th>
+					<th scope="col" colspan="3" style="text-align: center;">Horas a la semana</th>
+					<th scope="col">Total horas semana</th>
+				</tr>
+				<tr>
+					<th></th>
+					<th></th>
+					<th></th>
+					<th>Licenciatura</th>
+					<th>Maestría</th>
+					<th>Teórica</th>
+					<th>Teórica/práctica</th>
+					<th>Práctica</th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+			</tbody>
+			<tfoot>
+				<tr>
+					<td colspan="9">
+						<div id="buttonAddDocencia" class="btn btn-default">
+							Añadir
+						</div>
+					</td>
+				</tr>
+			</tfoot>
+		</table>
+		<table id="tblAddTutoria" class="table table-bordered">
+			<thead class="thead-dark">
+				<tr>
+					<th scope="col" colspan="9" style="text-align: center;">Actividades de tutoría</th>
+				</tr>
+				<tr>
+					<th></th>
+					<th scope="col">Nombre del estudiente</th>
+					<th scope="col">Tipo de tutoría</th>
+					<th scope="col" colspan="2" style="text-align: center;">Nivel</th>
+					<th scope="col" colspan="3" style="text-align: center;">Horas a la semana</th>
+					<th scope="col">Total horas semana</th>
+				</tr>
+				<tr>
+					<th></th>
+					<th></th>
+					<th></th>
+					<th>Licenciatura</th>
+					<th>Maestría</th>
+					<th>Teórica</th>
+					<th>Teórica/práctica</th>
+					<th>Práctica</th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+			</tbody>
+			<tfoot>
+				<tr>
+					<td colspan="9">
+						<div id="buttonAddTutoria" class="btn btn-default">
+							Añadir
+						</div>
+					</td>
+				</tr>
+			</tfoot>
+		</table>
+		<table id="tblAddDirTesis" class="table table-bordered">
+			<thead class="thead-dark">
+				<tr>
+					<th scope="col" colspan="9" style="text-align: center;">Actividades de dirección de tesis</th>
+				</tr>
+				<tr>
+					<th></th>
+					<th scope="col">Nombre del estudiante</th>
+					<th scope="col">Nombre de la tesis</th>
+					<th scope="col" colspan="2" style="text-align: center;">Nivel</th>
+					<th scope="col">Fecha de termino</th>
+					<th scope="col">Total de horas a la semana</th>
+				</tr>
+				<tr>
+					<th></th>
+					<th></th>
+					<th></th>
+					<th>Licenciatura</th>
+					<th>Maestría</th>
+					<th></th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+			</tbody>
+			<tfoot>
+				<tr>
+					<td colspan="9">
+						<div id="buttonAddDirTesis" class="btn btn-default">
+							Añadir
+						</div>
+					</td>
+				</tr>
+			</tfoot>
+		</table>
+		<table id="tblAddActInvest" class="table table-bordered">
+			<thead class="thead-dark">
+				<tr>
+					<th scope="col" colspan="9" style="text-align: center;">Actividades de investigación</th>
+				</tr>
+				<tr>
+					<th></th>
+					<th scope="col">Nombre del proyecto</th>
+					<th scope="col">Función en el proyecto</th>
+					<th scope="col">Productos esperados del proyecto</th>
+					<th scope="col">Total de horas a la semana</th>
+				</tr>
+			</thead>
+			<tbody>
+			</tbody>
+			<tfoot>
+				<tr>
+					<td colspan="9">
+						<div id="buttonAddInvest" class="btn btn-default">
+							Añadir
+						</div>
+					</td>
+				</tr>
+			</tfoot>
+		</table>
+		</table>
+		<table id="tblAddGestAcadem" class="table table-bordered">
+			<thead class="thead-dark">
+				<tr>
+					<th scope="col" colspan="8" style="text-align: center;">Actividades de gestión académica</th>
+				</tr>
+				<tr>
+					<th></th>
+					<th scope="col">Función</th>
+					<th scope="col">Descripción de la actividad</th>
+					<th scope="col">Producto esperado</th>
+					<th scope="col">Total horas semana</th>
+				</tr>
+			</thead>
+			<tbody>
+			</tbody>
+			<tfoot>
+				<tr>
+					<td colspan="5">
+						<div id="buttonAddGestAcadem" class="btn btn-default">
+							Añadir
+						</div>
+					</td>
+				</tr>
+			</tfoot>
+		</table>
+	</form>
+	<div class="col-12 col-sm-12 col-md-12">
+		<div class="text-right">
+				<button  id="sigFormProgramActividades" type="submit" class="btn btn-primary" name="action" value="validarPlanTrabajo">Guardar</button>
+		</div>
+	</div>
+</script>
+
+<script id="tmp-Docencia" type="text/template">
+	<tr  num="<%= num %>">
+		<td>
+			<div class="btn btn-default delete-row">Eliminar</div>
+		</td>
+		<td>
+			<input type="text" class="form-control" name="txtPTNomAsig"
+				<% if( typeof(obj.txtPTNomAsig) !== "undefined" ){ %>
+					value = "<%= obj.txtPTNomAsig %>"
+				<% } %>
+			>
+		</td>
+		<td>
+			<input class="form-control" type="text" name="numberPTNoEstudi"
+				<% if( typeof(obj.numberPTNoEstudi) !== "undefined" ){ %>
+					value = "<%= obj.numberPTNoEstudi %>"
+				<% } %>
+			>
+		</td>
+		<td style="margin: center;">
+			<div class="form-check">
+				<input type="radio" name="nivelDocente-<%= num %>" value="0" 
+					<% if( typeof(obj.nivelDocente) !== "undefined" && obj.nivelDocente == '0'){ %>
+						checked="checked"
+					<% }else if( typeof(obj.nivelDocente) === "undefined" ){ %>
+						checked="checked"
+					<% } %>
+				>
+			</div>
+		</td>
+		<td style="margin: center;">
+			<div class="form-check">
+				<input type="radio" name="nivelDocente-<%= num %>" value="1"
+					<% if( typeof(obj.nivelDocente) !== "undefined" && obj.nivelDocente == '1'){ %>
+						checked="checked"
+					<% } %>
+				>
+			</div>
+		</td>
+		<td>
+			<input class="form-control" type="number" name="numberPTTeorica"
+				<% if( typeof(obj.numberPTTeorica) !== "undefined" ){ %>
+					value = "<%= obj.numberPTTeorica %>"
+				<% } %>
+			>
+		</td>
+		<td>
+			<input class="form-control" type="number" name="numberPTTeoPrac"
+				<% if( typeof(obj.numberPTTeoPrac) !== "undefined" ){ %>
+					value = "<%= obj.numberPTTeoPrac %>"
+				<% } %>
+			>
+		</td>
+		<td>
+			<input class="form-control" type="number" name="numberPTPractica"
+				<% if( typeof(obj.numberPTPractica) !== "undefined" ){ %>
+					value = "<%= obj.numberPTPractica %>"
+				<% } %>
+			>
+		</td>
+		<td>
+			<input type="number" class="form-control" name="txtPTTotal"
+				<% if( typeof(obj.txtPTTotal) !== "undefined" ){ %>
+					value = "<%= obj.txtPTTotal %>"
+				<% } %>
+			>
+		</td>
+	</tr>
+</script>
+
+<script id="tmp-Tuto" type="text/template">
+	<tr  num="<%= num %>">
+		<td>
+			<div class="btn btn-default delete-row">Eliminar</div>
+		</td>
+		<td>
+			<input type="text" class="form-control" name="txtPTNomAsig"
+				<% if( typeof(obj.txtPTNomAsig) !== "undefined" ){ %>
+					value = "<%= obj.txtPTNomAsig %>"
+				<% } %>
+			>
+		</td>
+		<td>
+			<input class="form-control" type="text" name="numberPTNoEstudi"
+				<% if( typeof(obj.numberPTNoEstudi) !== "undefined" ){ %>
+					value = "<%= obj.numberPTNoEstudi %>"
+				<% } %>
+			>
+		</td>
+		<td style="margin: center;">
+			<div class="form-check">
+				<input type="radio" name="nivelTutorias-<%= num %>" value="0"
+					<% if( typeof(obj.nivelTutorias) !== "undefined" && obj.nivelTutorias == '0'){ %>
+						checked="checked"
+					<% }else if( typeof(obj.nivelTutorias) === "undefined" ){ %>
+						checked="checked"
+					<% } %>
+				>
+			</div>
+		</td>
+		<td style="margin: center;">
+			<div class="form-check">
+				<input type="radio" name="nivelTutorias-<%= num %>" value="1"
+					<% if( typeof(obj.nivelTutorias) !== "undefined" && obj.nivelTutorias == '1'){ %>
+						checked="checked"
+					<% } %>
+				>
+			</div>
+		</td>
+		<td>
+			<input class="form-control" type="number" name="numberPTTeorica"
+				<% if( typeof(obj.numberPTTeorica) !== "undefined" ){ %>
+					value = "<%= obj.numberPTTeorica %>"
+				<% } %>
+			>
+		</td>
+		<td>
+			<input class="form-control" type="number" name="numberPTTeoPrac"
+				<% if( typeof(obj.numberPTTeoPrac) !== "undefined" ){ %>
+					value = "<%= obj.numberPTTeoPrac %>"
+				<% } %>
+			>
+		</td>
+		<td>
+			<input class="form-control" type="number" name="numberPTPractica"
+				<% if( typeof(obj.numberPTPractica) !== "undefined" ){ %>
+					value = "<%= obj.numberPTPractica %>"
+				<% } %>
+			>
+		</td>
+		<td>
+			<input type="number" class="form-control" name="txtPTTotal"
+				<% if( typeof(obj.txtPTTotal) !== "undefined" ){ %>
+					value = "<%= obj.txtPTTotal %>"
+				<% } %>
+			>
+		</td>
+	</tr>
+</script>
+
+<script id="tmp-DirecTesis" type="text/template">
+	<tr num="<%= num %>">
+		<td>
+			<div class="btn btn-default delete-row">Eliminar</div>
+		</td>
+		<td>
+			<input type="text" class="form-control" name="txtPTNomAsig"
+				<% if( typeof(obj.txtPTNomAsig) !== "undefined" ){ %>
+					value = "<%= obj.txtPTNomAsig %>"
+				<% } %>
+			>
+		</td>
+		<td>
+			<input class="form-control" type="text" name="numberPTNoEstudi"
+				<% if( typeof(obj.numberPTNoEstudi) !== "undefined" ){ %>
+					value = "<%= obj.numberPTNoEstudi %>"
+				<% } %>
+			>
+		</td>
+		<td style="margin: center;">
+			<div class="form-check">
+				<input type="radio" name="nivelTesis-<%= num %>" value="0"
+					<% if( typeof(obj.nivelTesis) !== "undefined" && obj.nivelTesis == '0'){ %>
+						checked="checked"
+					<% }else if( typeof(obj.nivelTesis) === "undefined" ){ %>
+						checked="checked"
+					<% } %>
+				>
+			</div>
+		</td>
+		<td style="margin: center;">
+			<div class="form-check">
+				<input type="radio" name="nivelTesis-<%= num %>" value="1"
+					<% if( typeof(obj.nivelTesis) !== "undefined" && obj.nivelTesis == '1'){ %>
+						checked="checked"
+					<% } %>
+				>
+			</div>
+		</td>
+		<th>
+			<input type="date" class="form-control" name="datePTFechaTerm"
+				<% if( typeof(obj.datePTFechaTerm) !== "undefined" ){ %>
+					value = "<%= obj.datePTFechaTerm %>"
+				<% } %>
+			>
+		</th>
+		<th>
+			<input type="number" class="form-control" name="textPTTotalHrs"
+				<% if( typeof(obj.textPTTotalHrs) !== "undefined" ){ %>
+					value = "<%= obj.textPTTotalHrs %>"
+				<% } %>
+			>
+		</th>
+	</tr>
+</script>
+
+<script id="tmp-ActInvest" type="text/template">
+	<tr  num="1">
+		<td>
+			<div class="btn btn-default delete-row">Eliminar</div>
+		</td>
+		<th>
+			<input type="text" class="form-control" name="textPTNomProject"
+				<% if( typeof(obj.textPTNomProject) !== "undefined" ){ %>
+					value = "<%= obj.textPTNomProject %>"
+				<% } %>
+			>
+		</th>
+		<th>
+			<input type="text" class="form-control" name="textPTFuncProject"
+				<% if( typeof(obj.textPTFuncProject) !== "undefined" ){ %>
+					value = "<%= obj.textPTFuncProject %>"
+				<% } %>
+			>
+		</th>
+		<th>
+			<input type="text" class="form-control" name="textPTPoductProject"
+				<% if( typeof(obj.textPTPoductProject) !== "undefined" ){ %>
+					value = "<%= obj.textPTPoductProject %>"
+				<% } %>
+			>
+		</th>
+		<th>
+			<input type="number" class="form-control" name="textPTTotalHrs"
+				<% if( typeof(obj.textPTTotalHrs) !== "undefined" ){ %>
+					value = "<%= obj.textPTTotalHrs %>"
+				<% } %>
+			>
+		</th>
+	</tr>
+</script>
+
+<script id="tmp-ActGestAcadem" type="text/template">
+	<tr num = "1">
+		<td>
+			<div class="btn btn-default delete-row">Eliminar</div>
+		</td>
+		<td>
+			<input type="text" class="form-control" name="textPTNomProject"
+				<% if( typeof(obj.textPTNomProject) !== "undefined" ){ %>
+					value = "<%= obj.textPTNomProject %>"
+				<% } %>
+			>
+		</td>
+		<td>
+			<input type="text" class="form-control" name="textPTFuncProject"
+				<% if( typeof(obj.textPTFuncProject) !== "undefined" ){ %>
+					value = "<%= obj.textPTFuncProject %>"
+				<% } %>
+			>
+		</td>
+		<td>
+			<input type="text" class="form-control" name="textPTPoductProject"
+				<% if( typeof(obj.textPTPoductProject) !== "undefined" ){ %>
+					value = "<%= obj.textPTPoductProject %>"
+				<% } %>
+			>
+		</td>
+		<td>
+			<input type="number" class="form-control" name="textPTTotalHrs"
+				<% if( typeof(obj.textPTTotalHrs) !== "undefined" ){ %>
+					value = "<%= obj.textPTTotalHrs %>"
+				<% } %>
+			>
+		</td>
+	</tr>
+</script>

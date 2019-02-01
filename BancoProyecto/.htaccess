@@ -1,0 +1,14 @@
+Options +FollowSymlinks
+RewriteEngine On
+
+RewriteBase /BancoProyecto/
+
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteCond %{SCRIPT_FILENAME} !-f
+
+RewriteRule ^([a-zA-Z\-\_0-9\sáéíóú]*)$ index.php?page=$1 [L]
+RewriteRule ^([a-zA-Z\-\_0-9\sáéíóú]*)/([a-zA-Z\-\_0-9\sáéíóú]*)$ index.php?page=$1&id=$2 [L]
+
+Options -Indexes
+
+ErrorDocument 404 /BancoProyecto/404.html

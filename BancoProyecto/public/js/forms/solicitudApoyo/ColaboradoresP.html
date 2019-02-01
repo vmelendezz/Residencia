@@ -1,0 +1,342 @@
+<script id="tmp-Colaboradores" type="text/template">
+	<form id="frmColaboradoresP">
+		<div class="row">
+			<div class="col-12 col-sm-12 col-md-12" style="margin-top: 20px;">
+				<H3 style = "text-align: center;">Profesores colaboradores en el proyecto</H3>
+			</div>
+			<div class="col-12 col-sm-12 col-md-12">
+				<table id="table-colaboradores" class="table table-bordered">
+					<thead class="thead-dark">
+						<tr>
+							<th ></th>
+							<th scope="col">Nombre</th>
+							<th scope="col" colspan="2">Profesor  TC</th>
+							<th scope="col">Correo electrónico</th>
+							<th scope="col" colspan="2">Perfil PROMEP</th>
+							<th scope="col">Nivel SNI/No. CVU</th>
+						</tr>
+						<tr>
+							<th></th>
+							<th></th>
+							<th>Si</th>
+							<th>No</th>
+							<th></th>
+							<th>Si</th>
+							<th>No</th>
+							<th></th>
+						</tr>
+					</thead>
+					<tbody>
+					</tbody>
+					<tfoot>
+						<tr>
+							<td colspan="9">
+								<div id="button-add-colaborador" class="btn btn-default">
+									Añadir Colaborador
+								</div>
+							</td>
+						</tr>
+					</tfoot>
+				</table>
+			</div>
+			<div class="col-12 col-sm-12 col-md-12">
+				Precise los propósitos que se cumplirán con el desarrollo del proyecto de forma cualitativa (objetivos generales y particulares descritos con verbo en infinitivo), máximo una cuartilla.
+				<table class="table table-bordered">
+					<thead class="thead-dark">
+						<tr>
+							<th style="text-align: center;">Objetivos del proyecto</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td scope="row">1.- General
+								<textarea  type="text" class="form-control independiente" id="OBJETIVOS" maxlength="1800" name="textAreaObjetivos"></textarea>
+							</td>
+						</tr>
+						<tr>
+							<td scope="row">2. Específicos
+								<textarea  type="text" class="form-control independiente" id="OBJETIVOS" maxlength="1800" name="textAreaObjetivosEspecificos"></textarea>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="col-12 col-sm-12 col-md-12">
+				<table class="table table-bordered">
+					<thead class="thead-dark">
+						<tr>
+							<th colspan="2" style="text-align: center;">Productos entregables</th>
+						</tr>
+						<tr>
+							<th style="width: 50%;">Contribución en la formación de recursos humanos
+							Especificar si se titularán o estarán en proceso de tesis
+							y/o proyecto de residencia</th>
+							<th>Productividad académica</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+								<div class="col-12">
+									<div class="form-group">
+										<label for="LICENCIATURA">Licenciatura:</label>
+										<input type="text" maxlength="50" class="form-control independiente" id="LICENCIATURA" name="txtLicProdEntreg">
+									</div>
+								</div>
+								<div class="col-12">
+									<div class="form-group">
+										<label for="MAESTRIA">Maestria:</label>
+										<input type="text" maxlength="50" class="form-control independiente" id="MAESTRIA" name="txtMaestProdEntreg">
+									</div>
+								</div>
+								<div class="col-12">
+									<div class="form-group">
+										<label for="DOCTORADO">Doctorado:</label>
+										<input type="text" maxlength="50" class="form-control independiente" id="DOCTORADO" name="txtDocProdEntreg">
+									</div>
+								</div>
+									<table id="table-alumnos" class="table table-bordered">
+										<thead>
+											<tr>
+												<th colspan="2" style="text-align: center;">Incorporación de alumnos de licenciatura al proyecto
+												</th>
+											</tr>
+										</thead>
+										<tbody>
+										</tbody>
+										<tfoot>
+											<tr>
+												<td colspan="2">
+													<div id="button-addAlumno" class="btn btn-default">
+														Añadir
+													</div>
+												</td>
+											</tr>
+										</tfoot>
+									</table>
+								</div>
+									<table  id="table-residentes" class="table table-bordered">
+										<thead>
+											<tr>
+												<th colspan="2" style="text-align: center;">Alumnos residentes</label>
+												</th>
+											</tr>
+										</thead>
+										<tbody>
+										</tbody>
+										<tfoot>
+											<tr>
+												<td colspan="2">
+													<div id="button-addResidente" class="btn btn-default">
+														Añadir
+													</div>
+												</td>
+											</tr>
+										</tfoot>
+									</table>
+								</div>
+							</td>
+							<td>
+								<div class="col-12">
+									<div class="form-group">
+										<label for="LICENCIATURA">Artículos científicos en revistas indizadas enviados:</label>
+										<input type="text" maxlength="80" class="form-control independiente" id="LICENCIATURA" name="articulosIndizadas">
+									</div>
+								</div>
+								<div class="col-12">
+									<div class="form-group">
+										<label for="MAESTRIA">Artículos científicos en revistas arbitradas enviados:</label>
+										<input type="text" maxlength="80" class="form-control independiente" id="MAESTRIA" name="articulosArbitradas">
+									</div>
+								</div>
+								<div class="col-12">
+									<div class="form-group">
+										<label for="DOCTORADO">Artículos de divulgación enviados:</label>
+										<input type="text" maxlength="80" class="form-control independiente" id="DOCTORADO" name="articulosDivulgacionEnviados">
+									</div>
+								</div>
+								<div class="col-12">
+									<div class="form-group">
+										<label for="ALUMPROYE">Artículos en memorias en congreso enviados:</label>
+										<input type="text" maxlength="80" class="form-control independiente" id="ALUMPROYE" name="articulosMemoriasEnviados">
+									</div>
+								</div>
+								<div class="col-12">
+									<div class="form-group">
+										<label for="ALUMRESIDENCIA">Memorias en extenso en congresos: </label>
+										<input type="text" maxlength="80" class="form-control independiente" id="ALUMRESIDENCIA" name="memoriasCongreso">
+									</div>
+								</div>
+								<div class="col-12">
+									<div class="form-group">
+										<label for="ALUMRESIDENCIA">Capítulos de libros enviados para revisión: </label>
+										<input type="text" maxlength="80" class="form-control independiente" id="ALUMRESIDENCIA" name="capitulosEnviados">
+									</div>
+								</div>
+								<div class="col-12">
+									<div class="form-group">
+										<label for="ALUMRESIDENCIA">Libros enviados para revisión: </label>
+										<input type="text" maxlength="80" class="form-control independiente" id="ALUMRESIDENCIA" name="librosEnviados">
+									</div>
+								</div>
+								<div class="col-12">
+									<div class="form-group">
+										<label for="ALUMRESIDENCIA">Libros editados y publicados: </label>
+										<input type="text" maxlength="80" class="form-control independiente" id="ALUMRESIDENCIA" name="librosEditadosPublicados">
+									</div>
+								</div>
+								<div class="col-12">
+									<div class="form-group">
+										<label for="ALUMRESIDENCIA">Prototipos enviados para registro: </label>
+										<input type="text" maxlength="80" class="form-control independiente" id="ALUMRESIDENCIA" name="prototipoEnviados">
+									</div>
+								</div>
+								<div class="col-12">
+									<div class="form-group">
+										<label for="ALUMRESIDENCIA">Patentes enviadas para registro: </label>
+										<input type="text" maxlength="80" class="form-control independiente" id="ALUMRESIDENCIA" name="patentesEnviados">
+									</div>
+								</div>
+								<div class="col-12">
+									<div class="form-group">
+										<label for="ALUMRESIDENCIA">Paquetes tecnológicos enviados para registro: </label>
+										<input type="text" maxlength="80" class="form-control independiente" id="ALUMRESIDENCIA" name="paquetesEnviados">
+									</div>
+								</div>
+								<div class="col-12">
+									<div class="form-group">
+										<label for="PRODACADEMICOTROS">Otros (especifique): </label>
+										<input type="text" maxlength="80" class="form-control independiente" id="PRODACADEMICOTROS" name="otrosEspecificar">
+									</div>
+								</div>								
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="col-12 col-sm-12 col-md-12">
+				<table class="table table-bordered">
+					<thead class="thead-dark">
+						<tr>
+							<th colspan="2" style="text-align: center;">EL DESARROLLO DEL PROYECTO REQUIERE FINANCIAMIENTO</th>
+						</tr>
+						<tr>
+							<th class=" form-check">
+								<div class="form-check col-2" style="margin: auto;">
+			   				    	<input type="radio" class="independiente" name="rbnFinanciamiento" value="1" class="form-check-input" id="ChecksniSI">
+									<label class="form-check-label" for="CheckSiFinanciamiento">Si</label>
+			 					</div>
+							</th>
+							<th>
+								<div class="form-check col-2" style="margin: auto;">
+			   				    	<input type="radio" name="rbnFinanciamiento" value="2" class="form-check-input independiente" id="ChecksniSI" checked="checked">
+									<label class="form-check-label" for="CheckSiFinanciamiento">No</label>
+			 					</div>
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td colspan="2">
+								<label for="FUENTEFINANCIAMIENTO">FUENTE DE FINANCIAMIENTO:</label>
+									<input class="form-control independiente" maxlength="80" type="text" id="FUENTEFINANCIAMIENTO" name="financiamiento">
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		<div class="col-12 col-sm-12 col-md-12">
+			<div class="text-right">
+					<button  id="sigFormProgramActividades" type="submit" class="btn btn-primary independiente" name="action" value="validarColaboradoresP">Siguiente</button>
+			</div>
+		</div>
+	</form>
+</script>
+
+<script id="tmp-Colaborador" type="text/template">
+	<tr  num="<%= num %>">
+		<td><div class="btn btn-default delete-row">Eliminar</div></td>
+		<td><input type="text" name="txtNombreProfCol" 
+				<% if( typeof(obj.txtNombreProfCol) !== "undefined" ){ %>
+					value = "<%= obj.txtNombreProfCol %>"
+				<% } %>
+			></td>
+		<td style="margin: center;">
+			<div class="form-radio">
+				<input type="radio" name="rbnProfesorTC-<%= num %>" value="1"
+					<% if( typeof(obj.rbnProfesorTC) !== "undefined" && obj.rbnProfesorTC == '1'){ %>
+						checked="checked"
+					<% } %>
+				>
+			</div>
+		</td>
+		<td style="margin: center;">
+			<div class="form-radio">
+				<input type="radio" name="rbnProfesorTC-<%= num %>" value="0"
+					<% if( typeof(obj.rbnProfesorTC) !== "undefined" && obj.rbnProfesorTC == '0'){ %>
+						checked="checked"
+					<% }else if( typeof(obj.rbnProfesorTC) === "undefined" ){ %>
+						checked="checked"
+					<% } %>
+			</div>
+		</td>
+		<td><input type="text" name="txtCorreoProfCol"
+				<% if( typeof(obj.txtCorreoProfCol) !== "undefined" ){ %>
+					value = "<%= obj.txtCorreoProfCol %>"
+				<% } %>
+			></td>
+		<td style="margin: center;">
+			<div class="form-radio">
+				<input type="radio" name="rbnPerfilPromep-<%= num %>" value="1"
+					<% if( typeof(obj.rbnPerfilPromep) !== "undefined" && obj.rbnPerfilPromep == '1'){ %>
+						checked="checked"
+					<% } %>
+				>
+			</div>
+		</td>
+		<td style="margin: center;">
+			<div class="form-radio">
+				<input type="radio" name="rbnPerfilPromep-<%= num %>" value="0" 
+					<% if( typeof(obj.rbnPerfilPromep) !== "undefined" && obj.rbnPerfilPromep == '0'){ %>
+						checked="checked"
+					<% }else if( typeof(obj.rbnPerfilPromep) === "undefined" ){ %>
+						checked="checked"
+					<% } %>
+				>
+			</div>
+		</td>
+		<td><input type="text" name="txtNivelSNI"
+				<% if( typeof(obj.txtNivelSNI) !== "undefined" ){ %>
+					value = "<%= obj.txtNivelSNI %>"
+				<% } %>
+			></td>
+	</tr>
+</script>
+<script id="tmp-Alumnos" type="text/template">
+	<tr  num="<%= num %>">
+		<td>
+			<div class="btn btn-default delete-row">Eliminar</div>
+		</td>
+		<td>
+			<input type="text" class="form-control" placeholder="Alumnos" id="ALUMPROYE" name="txtAlumProyectoProdEntreg"
+					<% if( typeof(obj.txtAlumProyectoProdEntreg) !== "undefined" ){ %>
+						value = "<%= obj.txtAlumProyectoProdEntreg %>"
+					<% } %>
+				>
+		</td>
+	</tr>
+</script>
+<script id="tmp-Residente" type="text/template">
+	<tr  num="<%= num %>">
+		<td>
+			<div class="btn btn-default delete-row">Eliminar</div>
+		</td>
+		<td>
+			<input type="text" class="form-control" placeholder="Alumnos" id="ALUMPROYE" name="txtAlumProyectoProdEntreg"
+					<% if( typeof(obj.txtAlumProyectoProdEntreg) !== "undefined" ){ %>
+						value = "<%= obj.txtAlumProyectoProdEntreg %>"
+					<% } %>
+				>
+		</td>
+	</tr>
+</script>

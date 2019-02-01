@@ -1,13 +1,11 @@
 <?php
-//1.- se cargan los archivos
- require "./private/controller/rutes.php";
- require "./private/controller/templates.php";
+ //header('location:views/modules/inicio.php'); // nombre de la pagina de inicio
 
-//2.- se crea un objeto de la clase Rutes el cual contiene las variables globales y los metodos mandados a llamar en el constructor
- $rutes = new Rutes ();
-//6- se manda llamar el metodo getFile de la instancia rutes y lo que retorna se guarda en infoRute
- $infoRute = $rutes->getFile();
-
-//7- se crea un objeto de la clase Templates el cual contiene las variables globales y los metodos mandados a llamar en el constructor
-$templates = new Templates(  $infoRute );
+if( isset( $_GET['module'] ) && $_GET['module'] == 'BancoProyecto'  ){
+	echo 'sdfsdfsdf';
+}else if( isset( $_GET['module'] ) && $_GET['module'] == 'Tickets' ){
+	echo 'Tickets';
+} else{
+	header('location:views/modules/inicio.php'); // nombre de la pagina de inicio
+}
 ?>

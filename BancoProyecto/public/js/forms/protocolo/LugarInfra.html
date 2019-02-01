@@ -1,0 +1,70 @@
+<script id="tmp-LugarInfra" type="text/template">
+	<form id="frmLugarInfra">
+		<div class="col-12 col-sm-12 col-md-12" style="margin-top: 20px; text-align: center;">
+			<h4>2.	LUGAR(ES) EN DONDE SE VA A DESARROLLAR EL PROYECTOLUGAR(ES) EN DONDE SE VA A DESARROLLAR EL PROYECTO</h4>
+		</div>
+		<div class="col-12 col-md-12 col-sm-12">
+			Especifique el nombre de la Sección, Departamento, Taller o Laboratorio en que se realizará el proyecto, mencionando la dirección exacta del lugar.  Si el proyecto requiere de pruebas de campo, indique: estado, región, zona y municipio, así como la distancia en Km. con respecto al plantel. 
+		</div>
+		<div class="col-12 col-md-12 col-sm-12" style="margin-top: 20px">
+			<label for="NOMBRELUGTRAB">Nombre de la Sección/Departamento/Taller/Laboratorio</label>
+			<input type="text" class="form-control" id="NOMBRELUGTRAB" name="txtnombrelugtrab">
+		</div>
+		<div class="col-12 col-md-12 col-sm-12">
+			<label for="DIRECCION">Dirección exacta</label>
+			<input type="text" class="form-control" id="DIRECCION" name="txtdireccionlugtrab">
+		</div>
+		<div class="col-12 col-sm-12 col-md-12 row" style="margin-top: 20px">
+			<div class="col-3">¿Requiere pruebas de campo?</div>
+			<div class="form-check col-2">
+				    <input type="radio" class="form-check-input" name="pruebas" value="1">
+				<label class="form-check-label" for="CheckSipruebas">Si</label>
+				</div>
+			<div class="form-check col-2">
+				    <input type="radio" class="form-check-input" name="pruebas" value="0">
+				<label class="form-check-label" for="CheckNoPruebas">No</label>
+				</div>
+			</div>
+			<div class="col-12 col-sm-12 col-md-12 row" style="margin-top: 20px">
+				<div class="col-6 col-sm-6 col-md-6 form-group">
+					<label for="ESTADO">Estado:</label>
+					<input type="text" class="form-control" name="txtEstado">
+				</div>
+				<div class="col-6 col-sm-6 col-md-6 form-group">
+					<label for="REGION">Región:</label>
+					<input type="text" class="form-control" id="REGION" name="txtregion">
+				</div>
+			</div>
+			<div class="col-12 col-sm-12 col-md-12 row" style="margin-top: 20px">
+				<div class="col-6 col-sm-6 col-md-6 form-group">
+					<label for="ZONA">Zona:</label>
+					<input type="text" class="form-control" id="ZONA" name="txtzona">
+				</div>
+				<div class="col-6 col-sm-6 col-md-6 form-group">
+					<label for="MUNICIPIO">Municipio:</label>
+					<input type="text" class="form-control" id="MUNICIPIO" name="txtmunicipio">
+				</div>
+			</div>
+			<div class="col-12 col-sm-12 col-md-12 row" style="margin-top: 20px">
+				<div class="col-6 col-sm-6 col-md-2">
+					<label for="DISTANCIAKM">Distancia en Km:</label>
+				</div>
+				<div class="col-6 col-sm-6 col-md-10">
+					<input type="text" class="form-control" id="DISTANCIAKM" name="txtdistanciakm">
+				</div>
+			</div>
+			<div class="col-12 col-sm-12 col-md-12" style="margin-top: 20px; text-align: center;">
+			<h4>3.  INFRAESTRUCTURA</h4>
+		</div>
+		<div class="col-12 col-sm-12 col-md-12">
+			Mencione la infraestructura disponible en el plantel para el desarrollo del proyecto. Indique si va a hacer uso de las instalaciones en otras instituciones o dependencias.
+			<textarea type="text" name="infraestructura" class="form-control" id="INFRAESTRUCTURA" row="10"></textarea>
+		</div>
+		<div class="col-12 col-sm-12 col-md-12" style="margin-top: 20px; text-align: center;">
+			Se deberán proporcionar informes de avances semestrales y final, en donde se incluya el cumplimiento de las metas comprometidas en función de los productos entregables.  El cual será un criterio de evaluación para apoyos posteriores.
+		</div>
+		<div class="text-right">
+			<button id="" type="submit" class="btn btn-primary" name="action" value="validarLugarInfra">Guardar</button>
+		</div>
+	</form>
+</script>

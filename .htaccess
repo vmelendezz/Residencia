@@ -6,6 +6,9 @@ RewriteBase /
 RewriteCond %{SCRIPT_FILENAME} !-d
 RewriteCond %{SCRIPT_FILENAME} !-f
 
-RewriteRule ^([a-zA-Z\-\_0-9\sáéíóú]*)$ index.php?page=$1 [L]
+RewriteRule ^([a-zA-Z\-\_0-9\sáéíóú]*)$ index.php?module=$1 [L]
+RewriteRule ^([a-zA-Z\-\_0-9\sáéíóú]*)$ index.php?module=$1&view=$2 [L]
 
 Options -Indexes
+
+ErrorDocument 404 /404.php

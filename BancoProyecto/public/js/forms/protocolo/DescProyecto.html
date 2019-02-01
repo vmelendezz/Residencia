@@ -1,0 +1,75 @@
+<script id="tmp-DescProyecto" type="text/template">
+	<form id="frmDescProyecto">
+		<div class="row">
+			<div class="col-12 col-sm-12 col-md-12">
+				<div class="form-group">
+					<div class=" col-12 col-sm-12 col-md-12" style="margin-top: 30px; text-align: center;">
+						<H4>Nombre de la Intitución</H4>
+						<H5>INSTITUTO TECNOLÓGICO JOSÉ MARIO MOLINA PASQUEL Y HENRÍQUEZ</H5>
+					</div>
+				</div>
+			</div>
+			<div class="col-12 col-sm-12 col-md-12">
+				<div class="form-group">
+					<label for="RESPONSABLE">Campus:</label>
+					<select class="form-control" name="cmbxCampus">
+						<option>Selecciona una opción</option>
+					</select>
+				</div>
+			</div>
+			<div class="col-12 col-sm-12 col-md-12">
+				<div class="form-group">
+					<label for="TITULO">Título del proyecto:</label>
+					<input type="text" class="form-control" placeholder="Titulo que llevará el proyecto" id="TITULO" name="titulo">
+				</div>
+			</div>
+			<div class="col-12 col-sm-12 col-md-12" style="margin-top: 20px; text-align: center;">
+				<h4>1.	DESCRIPCIÓN DEL PROYECTO</h4>
+			</div>
+			<div class="col-12 col-sm-12 col-md-12 row">
+				1.1	Resumen
+				<div class="col-12 col-sm-12 col-md-12 row">
+					Describa de manera general la problemática que abordará en su proyecto de investigación, cómo la pretende resolver y sus posibles resultados, máximo una cuartilla.
+					<div class="col-12 col-sm-12 col-md-12">
+						<div class="form-group">
+							<textarea  type="text" class="form-control" id="RESUMEN" row="26" name="textAreaResumen"></textarea>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-12 col-sm-12 col-md-12 row">
+				1.2	Introducción (Máximo tres cuartillas)
+				<div class="col-12 col-sm-12 col-md-12">
+					<div class="form-group">
+						<textarea  type="text" class="form-control" id="INTRODUCCION" row="76" name="textAreaIntroduccion"></textarea>
+					</div>
+				</div>
+			</div>
+			<div class="col-12 col-sm-12 col-md-12 row">
+				1.3	Antecedentes
+				<div class="col-12 col-sm-12 col-md-12 row">
+					Refiera los antecedentes y avances científicos y/o tecnológicos que soportan la investigación a desarrollar (máximo tres cuartillas)
+					<div class="col-12 col-sm-12 col-md-12">
+						<div class="form-group">
+							<textarea  type="text" class="form-control" id="ANTECEDENTES" row="76" name="textAreaAntecedentes"></textarea>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-12 col-sm-12 col-md-12 row">
+				1.4	Marco teórico 
+				<div class="col-12 col-sm-12 col-md-12 row">
+					Fundamento teórico que respalda el trabajo de investigación (máximo 5 cuartillas).
+					<div class="col-12 col-sm-12 col-md-12">
+						<div class="form-group">
+							<textarea  type="text" class="form-control" id="MTEORICO" row="130" name="textAreaMteorico"></textarea>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="text-right">
+			<button id="sigFormObjProyecto" type="submit" class="btn btn-primary" name="action" value="validarDescProyecto">Siguiente</button>
+		</div>
+	</form>
+</script>
